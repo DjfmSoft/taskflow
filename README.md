@@ -1,4 +1,4 @@
-# TaskFlow ![CI](https://github.com/USUARIO/taskflow/actions/workflows/ci.yml/badge.svg)
+# TaskFlow ![CI](https://github.com/djfernandez/taskflow/actions/workflows/ci.yml/badge.svg)
 
 Gestor de tareas en Python · Proyecto integrador DevOps & Project Management.
 Sitio: https://github.com/djfernandez/taskflow/ · Jira: https://dannyjoel-soft.atlassian.net/jira/software/projects/TF/summary (proyecto TF)
