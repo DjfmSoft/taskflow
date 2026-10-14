@@ -25,6 +25,8 @@ class GestorTareas:
             raise ValueError("El título no puede estar vacío")
         if prioridad not in PRIORIDADES:
             raise ValueError(f"Prioridad inválida: {prioridad}")
+        if any(t.titulo.lower() == titulo.lower() for t in self._tareas):   # TF-11
+            raise ValueError(f"Ya existe una tarea llamada '{titulo}'")
         tarea = Tarea(self._siguiente_id, titulo, prioridad)
         self._tareas.append(tarea)
         self._siguiente_id += 1
