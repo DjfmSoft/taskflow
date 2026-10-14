@@ -30,6 +30,16 @@ class GestorTareas:
         self._siguiente_id += 1
         return tarea
     
+    def resumen(self):                                                     # TF-13
+        total = len(self._tareas)
+        completadas = sum(1 for t in self._tareas if t.completada)
+        avance = round(completadas * 100 / total) if total else 0
+        return {
+            "total": total,
+            "completadas": completadas,
+            "pendientes": total - completadas,
+            "avance": avance,
+        }
     def filtrar_por_prioridad(self, prioridad):                            # TF-11
         if prioridad not in PRIORIDADES:
             raise ValueError(f"Prioridad inválida: {prioridad}")
