@@ -29,6 +29,17 @@ class GestorTareas:
         self._tareas.append(tarea)
         self._siguiente_id += 1
         return tarea
+    
+    def filtrar_por_prioridad(self, prioridad):                            # TF-11
+        if prioridad not in PRIORIDADES:
+            raise ValueError(f"Prioridad inválida: {prioridad}")
+        return [t for t in self._tareas if t.prioridad == prioridad]
+
+    def buscar_texto(self, texto):                                         # TF-12
+        texto = texto.strip().lower()
+        if not texto:
+            raise ValueError("El texto de búsqueda no puede estar vacío")
+        return [t for t in self._tareas if texto in t.titulo.lower()]
 
     def completar(self, tarea_id):
         tarea = self.buscar(tarea_id)
