@@ -29,6 +29,17 @@ class GestorTareas:
         self._tareas.append(tarea)
         self._siguiente_id += 1
         return tarea
+    
+    def resumen(self):                                                     # TF-13
+        total = len(self._tareas)
+        completadas = sum(1 for t in self._tareas if t.completada)
+        avance = round(completadas * 100 / total) if total else 0
+        return {
+            "total": total,
+            "completadas": completadas,
+            "pendientes": total - completadas,
+            "avance": avance,
+        }
 
     def completar(self, tarea_id):
         tarea = self.buscar(tarea_id)
