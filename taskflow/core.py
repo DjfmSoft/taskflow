@@ -69,3 +69,6 @@ def test_eliminar_no_reutiliza_ids():
 def test_eliminar_inexistente_lanza_error():
     with pytest.raises(KeyError):
         GestorTareas().eliminar(42)
+        
+"""Lógica principal de TaskFlow."""
+"""Lógica principal de TaskFlow."""
