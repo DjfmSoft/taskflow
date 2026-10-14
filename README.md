@@ -1,34 +1,36 @@
-# TaskFlow
+# TaskFlow ![CI](https://github.com/USUARIO/taskflow/actions/workflows/ci.yml/badge.svg)
 
-agrega el badge de CI bajo el título
-
-Gestor de tareas en Python · Proyecto integrador del curso **DevOps & Project Management**.
+Gestor de tareas en Python · Proyecto integrador DevOps & Project Management.
+Sitio: https://USUARIO.github.io/taskflow/ · Jira: https://SITIO.atlassian.net (proyecto TF)
 
 ## Equipo
 
-- Nombre Apellido — @usuario-github
-- Pareja de revisión: @usuario-pareja
+## Funcionalidades (con la clave de Jira de cada una)
 
-## ¿Qué hace?
+## Cómo ejecutarlo y probarlo
 
-TaskFlow permite agregar tareas con prioridad (baja, media, alta), completarlas y listar las pendientes.
+## Flujo de trabajo
 
-## Cómo ejecutarlo
+- Estrategia: GitHub Flow · merge: squash · main protegida (ruleset)
+- Convenciones: ramas `tipo/TF-n-descripcion`, Conventional Commits, PRs con plantilla
 
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows (Git Bash): source .venv/Scripts/activate
-pip install -r requirements.txt
-python -m taskflow
-python -m pytest -v
-```
+## CI/CD
 
-## Avance del proyecto
+- ci.yml: pruebas en Python 3.11–3.13 en cada PR
+- deploy.yml: pruebas + publicación en Pages en cada merge a main
 
-- [x] Hito 1 — Repositorio, código base y pruebas locales
-- [ ] Hito 2 — GitHub Flow, CI/CD y GitHub Pages
-- [ ] Hito 3 — Jira, sprint e integración con GitHub
+## Gestión ágil
+
+- Épicas, Sprint Goal, velocity (Sprint 0 y Sprint 1), enlace al burndown
 
 ## Evidencias
 
-(Se completa en cada hito: enlaces a PRs, workflows, sitio publicado y Jira.)
+- Lista de PRs (enlaces) · capturas en docs/evidencias/
+
+## Retrospectiva del Sprint 1
+
+| Mantener | Mejorar | Acción (clave Jira) |
+| -------- | ------- | ------------------- |
+|          |         |                     |
+
+## Lecciones aprendidas
